@@ -1,0 +1,40 @@
+---
+title: "Schedule HT18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+suppressPackageStartupMessages(library(jsonlite))
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(knitr))
+
+# Byt https mot aktuell schemalänk nedan
+TimeEdit_URL <- "https://cloud.timeedit.net/su/web/stud1/ri15QXQl624Z5qQv27083Z66y6Y700lQ5Yd5Y5gQ7075W23ZW3a6Ka8WnXu5b5u3b1WpW7hmLK477juc5wWoarW3%C3%A461dXBWX6ua%C3%A4npj53V86VX04W5YW8364X9WY597WX6Y4354W854WWo5860W7XV955a6w11rVv319WI0V66435oXYW5xjWYWwVcWYYo1x82oWVo70YWWo37VXo56W.json"
+datum <- unique(fromJSON(TimeEdit_URL, flatten = TRUE)$reservations) %>% 
+    mutate(veckodag = weekdays(as.Date(startdate)), 
+           tid = paste(starttime, endtime, sep = "-")) %>% 
+    select(veckodag, startdate, tid) %>% 
+    distinct() # %>% apply(., 1, paste, collapse = ", ")
+topics <- c(
+    "[Introduction. Software, GitHub and Markdown.](day1.html) [[Slides]](https://rawgit.com/MT5013-VT18/MT5013-VT18.github.io/master/slides/slide1.html#1)",
+    "[Tidyverse: Basic dplyr and ggplot2.](day2.html) [[Slides]](https://rawgit.com/MT5013-VT18/MT5013-VT18.github.io/master/slides/slide2.html#1)",
+    "[Tidyverse: group_by and summarise, more ggplot2.](day3.html)",
+    "[Exploratory data analysis](day4.html)",
+    "[Cleaning data: Tidy data. Long to wide and back.](day5.html)",
+    "[Relational data: Combining tables with dplyr joins.](day6.html)",
+    "[Exploring high-dimensional data: Principal components and clustering](day7.html) [[Slides]](https://rawgit.com/MT5013-VT18/MT5013-VT18.github.io/master/slides/slide7.html#1)",
+    "[Relational data: SQL basics](day8.html).",
+    "[Text data: Regular expressions.](day9.html)",
+    "[Using APIs: httr, JSON and XML.](day10.html)",
+    "[Web-scraping: Basic rvest.](day11.html)",
+    "[R Programming: Programming with functions.](day12.html)",
+    "[R Programming: Functional programming with purrr.](day13.html)",
+    "[Presenting: Principles of visualisation.](dat14.html)",
+    "Exam.",
+    "TBA",
+    "Project presentation.")
+kable(data.frame(Day = paste(datum$veckodag, datum$startdate, sep = ", "), Time = datum$tid, Topic = topics))
+```
