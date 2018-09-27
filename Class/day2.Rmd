@@ -1,5 +1,5 @@
 ---
-title: 'Dag 2: Tidyverse: Grundläggande dplyr och ggplot2.'
+title: 'Dag 2: Tidyverse: Basic `dplyr` and `ggplot2`.'
 output:
   html_document:
     toc: true
@@ -18,7 +18,7 @@ Start by creating a new R-project "Classroom" that you will use for your class a
 
 # Systembolaget's assortment
 
-[Systembolaget](https://en.wikipedia.org/wiki/Systembolaget)'s assortment of beverages from 2018-11-XX is available in the file `Class_files/Products-2018-jan-12-081155.csv`. It is downloaded in xls-format from <https://www.systembolaget.se/api/> and saved as a `.csv`-file from Excel (not entirely reproducable!). Load its contents by
+[Systembolaget](https://en.wikipedia.org/wiki/Systembolaget)'s assortment of beverages from 2018-11-XX is available in the file `Class_files/Products-2018-jan-12-081155.csv`. It is downloaded in xls-format from <https://www.systembolaget.se/api/> and saved as a `.csv`-file from Excel (not entirely reproducible!). Load its contents by
 
 ```{r, eval = FALSE}
 library(tidyverse)
