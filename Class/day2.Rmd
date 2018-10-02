@@ -1,5 +1,5 @@
 ---
-title: 'Dag 2: Tidyverse: Basic `dplyr` and `ggplot2`.'
+title: 'Day 2: Tidyverse: Basic `dplyr` and `ggplot2`.'
 output:
   html_document:
     toc: true
