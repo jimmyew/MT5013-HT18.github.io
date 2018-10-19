@@ -55,9 +55,11 @@ as.POSIXct("2018-01-01 23:57:04 CET") %>% format("%H:%M")
 ```
 for extracting the hour and minute, see `?format.POSIXct` for more examples.
 
+* Visualise the number of hours spent playing music each day over a sequence of dates.
+
 ## Insurance claims from kammarkollegiet
 
-[Kammarkollegiet](https://www.kammarkollegiet.se/) is a public agency that among other things issue insurances. The file `Class_files/claims.csv` contains data on claims from one of their personal insurances. Each claim has an unique `Claim id`, a `Claim date`, a `Closing date` and a number of `Payment`s disbursed at `Payment date`s. If the claim is not closed (there may be more payments coming) `Closing date` is given value `NA`. Null claims, i.e. claims that has been closed without payment, are not included.
+[Kammarkollegiet](https://www.kammarkollegiet.se/) is a public agency that among other things issue insurances. The file [`Class_files/claims.csv`](https://github.com/MT5013-HT18/Class_files/blob/master/claims.csv) contains data on claims from one of their personal insurances. Each claim has an unique `Claim id`, a `Claim date`, a `Closing date` and a number of `Payment`s disbursed at `Payment date`s. If the claim is not closed (there may be more payments coming) `Closing date` is given value `NA`. Null claims, i.e. claims that has been closed without payment, are not included.
 
 Read the data by
 ```{r, eval = FALSE}
@@ -69,10 +71,23 @@ claim_data <- read_csv("Class_files/claims.csv")
 
 * Plot the number of claims per year (each `Claim id` should only be counted once!).
 
-Actuaries are very fond of [*loss triangles*](https://en.wikipedia.org/wiki/Chain-ladder_method). This is a table where the value on row $i$, column $j$ is the sum of all payments on claims with `Claim date` in year $i$ that are disbursed until the $j$:th calendar year after the year of the claim/accident. The table will be a triangle since future payments are not available.
+Actuaries are very fond of [*loss triangles*](https://en.wikipedia.org/wiki/Chain-ladder_method#Example). This is a table where the value on row $i$, column $j$ is the sum of all payments on claims with `Claim date` in year $i$ that are disbursed until the $j$:th calendar year after the year of the claim/accident. The table will be a triangle since future payments are not available.
 
 * For claims made since 2010, compute the loss triange and print it with `knitr::kable`. Try to do it in a single sequence of pipes. If future payments are coded as `NA`, using `options(knitr.kable.NA = '')` will result in a nicer looking table.
 
+## Election 2018
+
+All political parties participating in the 2018 Swedish elections can be downloaded from [Valmyndigheten](https://data.val.se/val/val2018/statistik/index.html#deltagande_partier) by
+```{r, eval = FALSE}
+parties_2018 <- read_csv2("https://data.val.se/val/val2018/valsedlar/partier/deltagande_partier.skv",
+                          locale = locale("sv", encoding = "ISO-8859-1"))
+```
+
+### Excercises
+
+* How many unique parties participated in each of the three elections (`VALTYP` equals `R` for [Riksdagen](https://en.wikipedia.org/wiki/Riksdag), `L` for [Landsting](https://en.wikipedia.org/wiki/County_councils_of_Sweden) and `K` for [Kommun](https://en.wikipedia.org/wiki/Municipal_council_(Sweden)))? Note that the same party may appear multiple times (based on e.g. multiple reasons of inclusion in `DELTAGANDEGRUND`)
+
+* How many local parties (parties only participating within a single `VALKRETSKOD`) participated in the Kommunalval (`VALTYP` equals `K`)?
 
 
 ## Systembolaget's assortment
@@ -82,5 +97,5 @@ As in [last class](day2.html) load Systembolaget's assortment and select the reg
 ### Excercises
 
 * How many beverages are there in each group of products (`Varugrupp`)? Use `filter` and `is.na` to filter out beverages where `Varugrupp` is not available.
-* Select red wines of vintage 2010-2018. Compute the mean `PrisPerLiter` for each vintage and plot using `ggplot`.
+* Select red wines of vintage 2010-2018. Compute the mean `PrisPerLiter` for each vintage and visualise using `ggplot`.
 * List the cheapest beverage (by `PrisPerLiter`) in each `Varugrupp`.

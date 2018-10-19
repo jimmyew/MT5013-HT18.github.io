@@ -14,17 +14,15 @@ Complete assignments *Data wrangling* and *Data visualization* (first two chapte
 
 ## Class activities
 
-Start by creating a new R-project "Classroom" that you will use for your class activities. Some activities will require data or scripts from the repo `https://github.com/MT5013-HT18/Class_files`, we therefore recommend that you clone this in a subfolder of your Classroom directory. Now create a new R Markdown document `Class1.Rmd` where you will do your work for this class.
+Start by creating a new R-project "Classroom" that you will use for your class activities. Some activities will require data or scripts from the repo [`Class_files`](https://github.com/MT5013-HT18/blob/master/Class_files), we therefore recommend that you clone this into a subfolder of your `Classroom` directory. Now create a new R Markdown document `Class1.Rmd` where you will do your work for this class.
 
 # Systembolaget's assortment
 
-[Systembolaget](https://en.wikipedia.org/wiki/Systembolaget)'s assortment of beverages from 2018-11-XX is available in the file `Class_files/Products-2018-jan-12-081155.csv`. It is downloaded in xls-format from <https://www.systembolaget.se/api/> and saved as a `.csv`-file from Excel (not entirely reproducible!). Load its contents by
+[Systembolaget](https://www.systembolaget.se/)'s assortment of beverages from 2018-10-18 is available in the file [`Class_files/systembolaget2018-10-08.csv`](https://github.com/MT5013-HT18/Class_files/blob/master/systembolaget2018-10-08.csv). It is downloaded from [Systembolaget's public API](https://www.systembolaget.se/api) and saved in csv-format by the script [`Class_files/Systembolaget.R`](https://github.com/MT5013-HT18/Class_files/blob/master/Systembolaget.R). Load its contents by
 
 ```{r, eval = FALSE}
 library(tidyverse)
-Sortiment_hela <- read_delim("data/Products-2018-jan-12-081155.csv", 
-                 delim = ";",
-                 locale = locale(encoding = "latin1", decimal_mark = "."))
+Sortiment_hela <- read_csv("Class_files/systembolaget2018-10-08.csv")
 ```
 
 
@@ -54,7 +52,7 @@ For the regular product range in `Sortiment_ord`
 
 # Olympic winter medals 
 
-The file `Class_files/Winter_medals2018-09-26.csv` contains the number of medals per country and olympic year at the winter olympics since 1980 together with the total population of the country. The data set is scraped from Wikipedia using the script [`Class_files/Winter_medals.R`](https://github.com/MT5013-HT18/Class_files/blob/master/Medal_table.R) which contains more information, in particular on countries that has been split or joined during the period.
+The file [`Class_files/Winter_medals2018-09-26.csv`](https://github.com/MT5013-HT18/Class_files/blob/master/Winter_medals2018-09-26.csv) contains the number of medals per country and olympic year at the winter olympics since 1980 together with the total population of the country. The data set is scraped from Wikipedia using the script [`Class_files/Winter_medals.R`](https://github.com/MT5013-HT18/Class_files/blob/master/Medal_table.R) which contains more information, in particular on countries that has been split or joined during the period.
 
 Load the file using
 ```{r, eval = FALSE}
@@ -75,4 +73,4 @@ winter_medals <- read_csv("Class_files/Winter_medals2018-09-26.csv")
 
 # Gapminder 
 
-Use `ggplot` to recreate (static versions) of some figures from [Hans Rosling's talks](https://www.ted.com/speakers/hans_rosling). Data is available in  `library(gapminder)`.
+Use `ggplot` to recreate (static versions) of some figures from [Hans Rosling's talks](https://www.ted.com/speakers/hans_rosling). Data is available in  package `gapminder`.
