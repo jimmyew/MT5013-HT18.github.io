@@ -187,7 +187,7 @@ music &lt;- map_df(days, get_SR_music, channel = 164)</code></pre>
 </div>
 <div id="insurance-claims-from-kammarkollegiet" class="section level2">
 <h2>Insurance claims from kammarkollegiet</h2>
-<p><a href="https://www.kammarkollegiet.se/">Kammarkollegiet</a> is a public agency that among other things issue insurances. The file <code>Class_files/claims.csv</code> contains data on claims from one of their personal insurances. Each claim has an unique <code>Claim id</code>, a <code>Claim date</code>, a <code>Closing date</code> and a number of <code>Payment</code>s disbursed at <code>Payment date</code>s. If the claim is not closed (there may be more payments coming) <code>Closing date</code> is given value <code>NA</code>. Null claims, i.e. claims that has been closed without payment, are not included.</p>
+<p><a href="https://www.kammarkollegiet.se/">Kammarkollegiet</a> is a public agency that among other things issue insurances. The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/claims.csv"><code>Class_files/claims.csv</code></a> contains data on claims from one of their personal insurances. Each claim has an unique <code>Claim id</code>, a <code>Claim date</code>, a <code>Closing date</code> and a number of <code>Payment</code>s disbursed at <code>Payment date</code>s. If the claim is not closed (there may be more payments coming) <code>Closing date</code> is given value <code>NA</code>. Null claims, i.e. claims that has been closed without payment, are not included.</p>
 <p>Read the data by</p>
 <pre class="r"><code>claim_data &lt;- read_csv(&quot;Class_files/claims.csv&quot;)</code></pre>
 <div id="excercises-1" class="section level3">

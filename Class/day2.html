@@ -148,13 +148,13 @@ $(document).ready(function () {
 </div>
 <div id="class-activities" class="section level2">
 <h2>Class activities</h2>
-<p>Start by creating a new R-project “Classroom” that you will use for your class activities. Some activities will require data or scripts from the repo <a href="https://github.com/MT5013-HT18/Class_files"><code>Class_files</code></a>, we therefore recommend that you clone this into a subfolder of your <code>Classroom</code> directory. Now create a new R Markdown document <code>Class1.Rmd</code> where you will do your work for this class.</p>
+<p>Start by creating a new R-project “Classroom” that you will use for your class activities. Some activities will require data or scripts from the repo <a href="https://github.com/MT5013-HT18/blob/master/Class_files"><code>Class_files</code></a>, we therefore recommend that you clone this into a subfolder of your <code>Classroom</code> directory. Now create a new R Markdown document <code>Class1.Rmd</code> where you will do your work for this class.</p>
 </div>
 <div id="systembolagets-assortment" class="section level1">
 <h1>Systembolaget’s assortment</h1>
-<p><a href="https://www.systembolaget.se/">Systembolaget</a>’s assortment of beverages from 2018-11-XX is available in the file <code>Class_files/Products-2018-jan-12-081155.csv</code>. It is downloaded from <a href="https://www.systembolaget.se/api">Systembolaget’s public API</a> and saved in csv-format by the script <a href="https://github.com/MT5013-HT18/Class_files/Systembolaget.R"><code>Class_files/Systembolaget.R</code></a>. Load its contents by</p>
+<p><a href="https://www.systembolaget.se/">Systembolaget</a>’s assortment of beverages from 2018-10-18 is available in the file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/systembolaget2018-10-08.csv"><code>Class_files/systembolaget2018-10-08.csv</code></a>. It is downloaded from <a href="https://www.systembolaget.se/api">Systembolaget’s public API</a> and saved in csv-format by the script <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Systembolaget.R"><code>Class_files/Systembolaget.R</code></a>. Load its contents by</p>
 <pre class="r"><code>library(tidyverse)
-Sortiment_hela &lt;- read_csv(&quot;Class_files/Products-2018-jan-12-081155.csv&quot;)</code></pre>
+Sortiment_hela &lt;- read_csv(&quot;Class_files/systembolaget2018-10-08.csv&quot;)</code></pre>
 <div id="exercises-training-of-arrange-filter-mutate-select" class="section level3">
 <h3>Exercises (training of <code>arrange</code>, <code>filter</code>, <code>mutate</code>, <code>select</code>, <code>%&gt;%</code>)</h3>
 <ul>
@@ -183,7 +183,7 @@ Sortiment_hela &lt;- read_csv(&quot;Class_files/Products-2018-jan-12-081155.csv&
 </div>
 <div id="olympic-winter-medals" class="section level1">
 <h1>Olympic winter medals</h1>
-<p>The file <code>Class_files/Winter_medals2018-09-26.csv</code> contains the number of medals per country and olympic year at the winter olympics since 1980 together with the total population of the country. The data set is scraped from Wikipedia using the script <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Medal_table.R"><code>Class_files/Winter_medals.R</code></a> which contains more information, in particular on countries that has been split or joined during the period.</p>
+<p>The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Winter_medals2018-09-26.csv"><code>Class_files/Winter_medals2018-09-26.csv</code></a> contains the number of medals per country and olympic year at the winter olympics since 1980 together with the total population of the country. The data set is scraped from Wikipedia using the script <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Medal_table.R"><code>Class_files/Winter_medals.R</code></a> which contains more information, in particular on countries that has been split or joined during the period.</p>
 <p>Load the file using</p>
 <pre class="r"><code>winter_medals &lt;- read_csv(&quot;Class_files/Winter_medals2018-09-26.csv&quot;)</code></pre>
 <div id="exercises-training-of-arrange-filter-mutate-select-1" class="section level3">
@@ -204,7 +204,7 @@ Sortiment_hela &lt;- read_csv(&quot;Class_files/Products-2018-jan-12-081155.csv&
 </div>
 <div id="gapminder" class="section level1">
 <h1>Gapminder</h1>
-<p>Use <code>ggplot</code> to recreate (static versions) of some figures from <a href="https://www.ted.com/speakers/hans_rosling">Hans Rosling’s talks</a>. Data is available in <code>library(gapminder)</code>.</p>
+<p>Use <code>ggplot</code> to recreate (static versions) of some figures from <a href="https://www.ted.com/speakers/hans_rosling">Hans Rosling’s talks</a>. Data is available in package <code>gapminder</code>.</p>
 </div>
 
 

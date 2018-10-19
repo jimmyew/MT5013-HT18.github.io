@@ -139,18 +139,18 @@ $(document).ready(function () {
 <div id="during-class" class="section level2">
 <h2>During class</h2>
 <ul>
-<li>The file <code>Class_files/Statistikdatabasen_2018-01-23 14_46_26.csv</code> contains records of adults visiting dental care by sex, municipality and year (downloaded from <a href="http://www.socialstyrelsen.se/statistik/statistikdatabas/tandhalsa">The National Board of Health and Welfare dental health records</a>). Read it with</li>
+<li>The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Statistikdatabasen_2018-01-23%2014_46_26.csv"><code>Class_files/Statistikdatabasen_2018-01-23 14_46_26.csv</code></a> contains records of adults visiting dental care by sex, municipality and year (downloaded from <a href="http://www.socialstyrelsen.se/statistik/statistikdatabas/tandhalsa">The National Board of Health and Welfare dental health records</a>). Read it with</li>
 </ul>
 <pre class="r"><code>dental_data &lt;- read_csv2(&quot;Class_files/Statistikdatabasen_2018-01-23 14_46_26.csv&quot;, skip = 1, n_max = 580)</code></pre>
 <p>(why <code>skip = 1</code> and <code>n_max = 580</code>?) and use <code>gather</code> to convert it to long (“tidy”) format.</p>
 <ul>
-<li>The file <code>Class_files/Statistikdatabasen_2018-01-23 15_04_12.csv</code> contains records of suicides and death totals by sex, county and year (from <a href="http://www.socialstyrelsen.se/statistik/statistikdatabas/dodsorsaker">The National Board of Health and Welfare</a>). Read it with</li>
+<li>The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Statistikdatabasen_2018-01-23%2015_04_12.csv"><code>Class_files/Statistikdatabasen_2018-01-23 15_04_12.csv</code></a> contains records of suicides and death totals by sex, county and year (from <a href="http://www.socialstyrelsen.se/statistik/statistikdatabas/dodsorsaker">The National Board of Health and Welfare</a>). Read it with</li>
 </ul>
 <pre class="r"><code>data &lt;- read_csv2(&quot;Class_files/Statistikdatabasen_2018-01-23 15_04_12.csv&quot;, skip = 1, n_max = 80)</code></pre>
 <p>and plot the proportion of suicides among death totals, by year, for the whole country.</p>
 <ul>
-<li><p>The file <code>Class_files/Statistikdatabasen_2018-01-23 15_39_06.csv</code> contains monthly records of social assistance (ekonomiskt bistånd). Explore it in a spread sheet and transform to “tidy format” containing the variable average payment per houshold (<code>Utbetalt ekonomiskt bistånd tkr</code> divided by <code>Antal hushåll</code>) for each month and county. It may be helpful to join the first two columns using <code>paste</code>.</p></li>
-<li><p>Examination of the course Matematik I (MM2001) consists a large number of smaller labs/exams with individual codes (Provkoder), see the <a href="https://sisu.it.su.se/pdf_creator/8940/34903">course plan</a> for a full list. The file <code>Class_files/MM2001.csv</code> contains results for 100 randomly chosen students exported using and older version of Ladok. Each row corresponds to one student (name and id removed). Transform data (or a subset of data) to a tidy format.</p></li>
+<li><p>The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Statistikdatabasen_2018-01-23%2015_39_06.csv"><code>Class_files/Statistikdatabasen_2018-01-23 15_39_06.csv</code></a> contains monthly records of social assistance (ekonomiskt bistånd). Explore it in a spread sheet and transform to “tidy format” containing the variable average payment per houshold (<code>Utbetalt ekonomiskt bistånd tkr</code> divided by <code>Antal hushåll</code>) for each month and county. It may be helpful to join the first two columns using <code>paste</code>.</p></li>
+<li><p>Examination of the course Matematik I (MM2001) consists a large number of smaller labs/exams with individual codes (Provkoder), see the <a href="https://sisu.it.su.se/pdf_creator/8940/34903">course plan</a> for a full list. The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/MM2001.csv.csv"><code>Class_files/MM2001.csv</code></a> contains results for 100 randomly chosen students exported using and older version of <a href="https://sv.wikipedia.org/wiki/LADOK">Ladok</a>. Each row corresponds to one student (name and id removed). Transform data (or a subset of data) to a tidy format.</p></li>
 </ul>
 </div>
 
