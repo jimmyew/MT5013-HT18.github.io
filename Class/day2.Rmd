@@ -14,7 +14,7 @@ Complete assignments *Data wrangling* and *Data visualization* (first two chapte
 
 ## Class activities
 
-Start by creating a new R-project "Classroom" that you will use for your class activities. Some activities will require data or scripts from the repo [`Class_files`](https://github.com/MT5013-HT18/blob/master/Class_files), we therefore recommend that you clone this into a subfolder of your `Classroom` directory. Now create a new R Markdown document `Class1.Rmd` where you will do your work for this class.
+Start by creating a new R-project "Classroom" that you will use for your class activities. Some activities will require data or scripts from the repo [`Class_files`](https://github.com/MT5013-HT18/Class_files), we therefore recommend that you clone this into a subfolder of your `Classroom` directory. Now create a new R Markdown document `Class1.Rmd` where you will do your work for this class.
 
 # Systembolaget's assortment
 
