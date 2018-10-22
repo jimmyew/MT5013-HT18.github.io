@@ -56,5 +56,9 @@ medal_long <- read_csv("Class_files/Winter_medals2018-09-26.csv") %>%
 ```
 Check the result with `glimpse(medal_long)`. Use `group_by` and `summarise` in order to aggregate the total number of medals of each denomination (Gold/Silver/Bronze) for each country. Illustrate the relative proportions of denominations, e.g. by `geom_bar` with `stat = "identity` and `position = "fill"`. 
 
+### First math course
 
+The file [`Class_files/MM2001_results.csv`](https://github.com/MT5013-HT18/Class_files/blob/master/MM2001_results.csv) contains the age, sex, and grade on course Matematik I (MM2001) of 3201 students aged 18-40 years. An `NA` in the grade column means that the student has been registered but not yet completed the course.
+
+Use `ggplot` to explore relations between the variables.
 

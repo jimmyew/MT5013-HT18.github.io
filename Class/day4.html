@@ -130,6 +130,7 @@ $(document).ready(function () {
 <li><a href="#during-class">During class</a><ul>
 <li><a href="#systembolagets-assortment">Systembolaget’s assortment</a></li>
 <li><a href="#winter-medals">Winter medals</a></li>
+<li><a href="#first-math-course">First math course</a></li>
 </ul></li>
 </ul>
 </div>
@@ -166,6 +167,11 @@ $(document).ready(function () {
     select(-Total) %&gt;% 
     gather(Denomination, Number, c(&quot;Gold&quot;, &quot;Silver&quot;, &quot;Bronze&quot;))</code></pre>
 <p>Check the result with <code>glimpse(medal_long)</code>. Use <code>group_by</code> and <code>summarise</code> in order to aggregate the total number of medals of each denomination (Gold/Silver/Bronze) for each country. Illustrate the relative proportions of denominations, e.g. by <code>geom_bar</code> with <code>stat = &quot;identity</code> and <code>position = &quot;fill&quot;</code>.</p>
+</div>
+<div id="first-math-course" class="section level3">
+<h3>First math course</h3>
+<p>The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/MM2001_results.csv"><code>Class_files/MM2001_results.csv</code></a> contains the age, sex, and grade on course Matematik I (MM2001) of 3201 students aged 18-40 years. An <code>NA</code> in the grade column means that the student has been registered but not yet completed the course.</p>
+<p>Use <code>ggplot</code> to explore relations between the variables.</p>
 </div>
 </div>
 
