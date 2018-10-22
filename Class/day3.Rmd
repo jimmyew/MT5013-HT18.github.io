@@ -97,5 +97,5 @@ As in [last class](day2.html) load Systembolaget's assortment and select the reg
 ### Excercises
 
 * How many beverages are there in each group of products (`Varugrupp`)? Use `filter` and `is.na` to filter out beverages where `Varugrupp` is not available.
-* Select red wines of vintage 2010-2018. Compute the mean `PrisPerLiter` for each vintage and visualise using `ggplot`.
+* Select red wines of vintage 2011-2018. Compute the mean `PrisPerLiter` for each vintage and visualise using `ggplot`.
 * List the cheapest beverage (by `PrisPerLiter`) in each `Varugrupp`.
