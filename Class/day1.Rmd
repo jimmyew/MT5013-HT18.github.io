@@ -92,7 +92,7 @@ Go to GitHub and check, it should look something like this:
 
 Note that GitHub displays a rendered version of the `README.md` below the list of files.
 
-You should now be ready to start the first [homework](HW.html).
+You should now be ready to start the first [homework](../HW.html).
 
 ## References
 
