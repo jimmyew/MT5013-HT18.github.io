@@ -50,6 +50,16 @@ For the regular product range in `Sortiment_ord`
 
 * Use your imagination and keep exploring the data.
 
+# Film events
+
+[Stockholm international film festival](https://www.stockholmfilmfestival.se/en) just started. In [`Class_files/Film_events_2018-11-07.csv`](https://github.com/MT5013-HT18/Class_files/blob/master/Film_events_2018-11-07.csv) you will find their event schedule as of this morning.
+
+### Exercises (training of `arrange`, `filter`, `mutate`, `select`, `%>%`)
+
+* What films are already sold out (for all screenings)?
+* What venue screens the most number of (unique) films?
+* Plot the proportion of sold out events for each day of the festival.
+
 # Olympic winter medals 
 
 The file [`Class_files/Winter_medals2018-09-26.csv`](https://github.com/MT5013-HT18/Class_files/blob/master/Winter_medals2018-09-26.csv) contains the number of medals per country and olympic year at the winter olympics since 1980 together with the total population of the country. The data set is scraped from Wikipedia using the script [`Class_files/Winter_medals.R`](https://github.com/MT5013-HT18/Class_files/blob/master/Medal_table.R) which contains more information, in particular on countries that has been split or joined during the period.

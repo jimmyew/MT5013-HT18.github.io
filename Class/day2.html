@@ -133,8 +133,11 @@ $(document).ready(function () {
 <li><a href="#exercises-training-of-ggplot-geom_point-geom_line-facet_wrap">Exercises (training of <code>ggplot</code>, <code>geom_point</code>, <code>geom_line</code>, <code>facet_wrap</code>)</a></li>
 <li><a href="#further-excercises">Further excercises</a></li>
 </ul></li>
-<li><a href="#olympic-winter-medals">Olympic winter medals</a><ul>
+<li><a href="#film-events">Film events</a><ul>
 <li><a href="#exercises-training-of-arrange-filter-mutate-select-1">Exercises (training of <code>arrange</code>, <code>filter</code>, <code>mutate</code>, <code>select</code>, <code>%&gt;%</code>)</a></li>
+</ul></li>
+<li><a href="#olympic-winter-medals">Olympic winter medals</a><ul>
+<li><a href="#exercises-training-of-arrange-filter-mutate-select-2">Exercises (training of <code>arrange</code>, <code>filter</code>, <code>mutate</code>, <code>select</code>, <code>%&gt;%</code>)</a></li>
 <li><a href="#exercises-training-of-ggplot-geom_point-geom_line-facet_wrap-1">Exercises (training of <code>ggplot</code>, <code>geom_point</code>, <code>geom_line</code>, <code>facet_wrap</code>)</a></li>
 </ul></li>
 <li><a href="#gapminder">Gapminder</a></li>
@@ -181,12 +184,24 @@ Sortiment_hela &lt;- read_csv(&quot;Class_files/systembolaget2018-10-08.csv&quot
 </ul>
 </div>
 </div>
+<div id="film-events" class="section level1">
+<h1>Film events</h1>
+<p><a href="https://www.stockholmfilmfestival.se/en">Stockholm international film festival</a> just started. In <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Film_events_2018-11-07.csv"><code>Class_files/Film_events_2018-11-07.csv</code></a> you will find their event schedule as of this morning.</p>
+<div id="exercises-training-of-arrange-filter-mutate-select-1" class="section level3">
+<h3>Exercises (training of <code>arrange</code>, <code>filter</code>, <code>mutate</code>, <code>select</code>, <code>%&gt;%</code>)</h3>
+<ul>
+<li>What films are already sold out (for all screenings)?</li>
+<li>What venue screens the most number of (unique) films?</li>
+<li>Plot the proportion of sold out events for each day of the festival.</li>
+</ul>
+</div>
+</div>
 <div id="olympic-winter-medals" class="section level1">
 <h1>Olympic winter medals</h1>
 <p>The file <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Winter_medals2018-09-26.csv"><code>Class_files/Winter_medals2018-09-26.csv</code></a> contains the number of medals per country and olympic year at the winter olympics since 1980 together with the total population of the country. The data set is scraped from Wikipedia using the script <a href="https://github.com/MT5013-HT18/Class_files/blob/master/Medal_table.R"><code>Class_files/Winter_medals.R</code></a> which contains more information, in particular on countries that has been split or joined during the period.</p>
 <p>Load the file using</p>
 <pre class="r"><code>winter_medals &lt;- read_csv(&quot;Class_files/Winter_medals2018-09-26.csv&quot;)</code></pre>
-<div id="exercises-training-of-arrange-filter-mutate-select-1" class="section level3">
+<div id="exercises-training-of-arrange-filter-mutate-select-2" class="section level3">
 <h3>Exercises (training of <code>arrange</code>, <code>filter</code>, <code>mutate</code>, <code>select</code>, <code>%&gt;%</code>)</h3>
 <ul>
 <li>Create a variable column <code>medals_per_mill</code>, the number of medals per million inhabitants.</li>
